@@ -27,9 +27,11 @@ class Obstacle{
       }else{
         World.remove(world, this.body);
         push();
-        this.visibility = this.visibility -5;
+        this.visibility = this.visibility -20;
         pop();
-        
+      }
+       if(this.visibility<0&&this.visibility>=-500){
+          score++;
       }
     }
 }
