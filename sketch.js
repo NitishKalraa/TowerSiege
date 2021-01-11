@@ -10,6 +10,7 @@ var holder1,holder2;
 var slingShot;
 var polygon_img;
 var bg;
+var score=0;
 function preload(){
   polygon_img=loadImage("images/polygon.png");
   bgChanger();
@@ -108,7 +109,9 @@ function draw() {
   image(polygon_img ,polygon.position.x,polygon.position.y,40,40);
 
   slingShot.display();
-  
+  fill("white");
+  textSize(20);
+  text("Score : "+score,100,30)
 }
 function mouseDragged(){
   Matter.Body.setPosition(polygon,{x:mouseX,y:mouseY});
